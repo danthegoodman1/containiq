@@ -2,9 +2,9 @@ package e2e
 
 import (
 	"context"
-	"github.com/mclenhard/containiq/pkg/controller"
-	"github.com/mclenhard/containiq/pkg/setup"
-	"github.com/mclenhard/containiq/test/e2e/config"
+	"github.com/containiq/containiq/pkg/controller"
+	"github.com/containiq/containiq/pkg/setup"
+	"github.com/containiq/containiq/test/e2e/config"
 	v1 "k8s.io/api/core/v1"
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"os"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mclenhard/containiq/pkg/setup"
-	"github.com/mclenhard/containiq/pkg/controller"
+	"github.com/containiq/containiq/pkg/setup"
+	"github.com/containiq/containiq/pkg/controller"
 )
 
 

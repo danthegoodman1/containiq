@@ -1,4 +1,4 @@
-module github.com/mclenhard/containiq
+module github.com/containiq/containiq
 
 go 1.14
 

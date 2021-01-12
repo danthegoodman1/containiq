@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/mclenhard/containiq/pkg/notify"
-	"github.com/mclenhard/containiq/pkg/setup"
+	"github.com/containiq/containiq/pkg/notify"
+	"github.com/containiq/containiq/pkg/setup"
 	"github.com/sirupsen/logrus"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/informers"

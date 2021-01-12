@@ -2,7 +2,7 @@ package notify
 
 import (
 	"fmt"
-	"github.com/mclenhard/containiq/pkg/setup"
+	"github.com/containiq/containiq/pkg/setup"
 	"github.com/slack-go/slack"
 	v1 "k8s.io/api/core/v1"
 	"github.com/sirupsen/logrus"

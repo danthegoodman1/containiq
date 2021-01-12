@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/mclenhard/containiq/pkg/setup"
+	"github.com/containiq/containiq/pkg/setup"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
 	"os"
