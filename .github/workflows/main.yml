@@ -1,0 +1,25 @@
+#workflow to build the docker image push to dockerhub
+name: Docker Image CI
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    name: build image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Login to Dockerhub
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: set version
+        id: vars
+        run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
+      - name: build the image
+        run: docker build . -f build/Dockerfile --tag containiq/containiq:${{steps.vars.outputs.tag}}
+      - name: push tagged image to registry
+        run: docker push containiq/containiq:${{steps.vars.outputs.tag}}
+      - name: Build latest version
+        run: docker build . -f build/Dockerfile --tag containiq/containiq:latest
+      - name: push latest version
+        run: docker push containiq/containiq:latest
+
