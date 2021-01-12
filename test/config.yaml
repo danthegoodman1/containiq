@@ -1,0 +1,14 @@
+monitoring:
+  namespaces:
+    watch:
+      - default #change to all if you would like to watch all namespaces
+      - testing
+  level:
+    watch:
+      - Warning #options are Warning and Normal
+      - Normal
+  resource:
+    watch:
+      - Pod #Change to all to watch all resources
+      - ReplicaSet
+      - Deployment

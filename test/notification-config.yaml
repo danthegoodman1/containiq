@@ -1,0 +1,8 @@
+Source:
+  Slack:
+    Key: testingkey
+    enabled: false
+    channel: testing
+  Webhook:
+    enabled: false
+    url: http://localhost:8080
