@@ -73,14 +73,14 @@ func checkForValue( a string, list []string) bool {
 }
 func (e) Send(event *v1.Event, config *setup.Config,currentTime time.Time) {
 
-	timeCreated := event.FirstTimestamp.Time
-	oldEvent := timeCreated.Before(currentTime)
+	timeCreated := event.ObjectMeta.CreationTimestamp.Time
+	newEvent := currentTime.Before(timeCreated)
 
 	namespaceCheck := checkForValue(event.Namespace , config.Monitoring.Namespaces.Watch)
 	objectCheck := checkForValue(event.InvolvedObject.Kind,config.Monitoring.Resource.Watch)
 	typeCheck := checkForValue(event.Type, config.Monitoring.Level.Watch)
 
-	if( namespaceCheck && objectCheck && !oldEvent && typeCheck) {
+	if( namespaceCheck && objectCheck && newEvent && typeCheck) {
 		if config.Source.Slack.Enabled == true {
 			notify.SendSlackEvent(config,event)
 		}
