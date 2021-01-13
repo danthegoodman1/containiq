@@ -29,10 +29,10 @@ Next invite the containiq bot, by using the command `/invite @containiq` in your
 `helm repo update`
 #### Helm example install 
 ```
-helm install containiq containiq/containiq --namespace=containiq  \\ \
- --set comm.Source.Slack.enabled=true  \\ \
- --set comm.Source.Slack.channel=testing \\ \
- --set comm.Source.Slack.Key=<slack_token>  \\ \
+helm install containiq containiq/containiq --namespace=containiq \
+ --set comm.Source.Slack.enabled=true \
+ --set comm.Source.Slack.channel=testing \
+ --set comm.Source.Slack.Key=<slack_token> \
  --set configuration.monitoring.namespaces.watch="{default,namespace2}" 
  ```
  
