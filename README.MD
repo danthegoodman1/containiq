@@ -10,10 +10,10 @@ The containiq agents utilizes the kubernetes informer api to watch for events
 and notify you when things change. You can filter based on resource, namespace or event type. 
 
 #### Using kubectl 
-The deployment.yaml file contains all of the neecessary resources to run 
+The `deployment.yaml` file contains all of the neecessary resources to run 
 the containiq agent in your cluster. 
 
-To get started update the deployment.yaml file's config map object with the resources and namespaces you would like to track. Next add your api keys to the 
+To get started update the `deployment.yaml` file's config map object with the resources and namespaces you would like to track. Next add your api keys to the 
 secret object and choose which notification channels you would like enable. 
 
 Finally run `kubectl apply -f deployment.yaml `
