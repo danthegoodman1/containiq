@@ -25,8 +25,8 @@ Start by using the button below and writing down the token it provides. This tok
 Next invite the containiq bot, by using the command `/invite @containiq` in your channel of choice 
 
 ### Using Helm 
-helm repo add containiq https://containiq.github.io/charts/
-helm repo update
+`helm repo add containiq https://containiq.github.io/charts/`
+`helm repo update`
 #### Helm example install 
 ```
 helm install containiq containiq/containiq --namespace=containiq  \\ \
